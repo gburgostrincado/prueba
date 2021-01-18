@@ -10,6 +10,8 @@ function App() {
   const dispatch = useDispatch()
   const posts = useSelector(state => state.posts)
   const isLoading = useSelector(state => state.isLoading)
+  const error = useSelector(state => state.error)
+
 
   useEffect(() => {
     dispatch(getPosts())
@@ -27,6 +29,7 @@ function App() {
           dispatch={dispatch}
         />
       }
+      {error && <p className="text-danger">{error}</p>}
      <Form
       dispatch={dispatch}
      />

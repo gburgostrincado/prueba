@@ -1,9 +1,10 @@
-import { GET_POSTS, ADD_POST, DELETE_POST, SEARCH_POST } from '../types'
+import { GET_POSTS, ADD_POST, DELETE_POST, SEARCH_POST, ERROR } from '../types'
 
 const initialState = {
     isLoading: true,
     posts: [],
     filterPosts: [],
+    error: ''
 }
 
 
@@ -37,6 +38,11 @@ const posts = (state = initialState, action) => {
                     ...state,
                     filterPosts: []
                 }
+            }
+        case ERROR:
+            return {
+                ...state,
+                error: action.payload
             }
         default:
             return state;
