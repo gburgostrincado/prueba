@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form input {
+  margin-right: 2em;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
